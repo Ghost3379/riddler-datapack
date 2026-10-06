@@ -23,6 +23,19 @@ A functional custom PCB for a film prop in the fan film "Robin: Origins". The de
   * USB-C Female (Data & Power)
   * 2x 4-Pin Headers (5V, GND, PWM, WS2812-Data) for fan connections
 
+## Visual Reference & In-Game Footage
+
+| Front View | Bottom View ("D-PCK 54") |
+| :---: | :---: |
+| ![Front View](docs/pics/in-game-front.png) | ![Bottom View](docs/pics/in-game-bottom.png) |
+| **Side Controls** | **Top Fans & Lighting** |
+| ![Side View](docs/pics/in-game-side.png) | ![Top View](docs/pics/in-game-top-fans.png) |
+
+## Sources & Credits
+
+* **Concept Art:** [Arkham City Fandom - Enigma Datapack](https://arkhamcity.fandom.com/wiki/Enigma_Datapack?file=Bao-enigma-data-pack.jpg)
+* **Video Game Screenshots & Footage:** [Batman Arkham - Enigma Datapacks Gameplay Footage (YouTube)](https://www.youtube.com/watch?v=1w_udK2QxwU)
+
 ## License
 The software/firmware in the [Firmware] directory is licensed under the GNU General Public License v3.0 (GPLv3).
 

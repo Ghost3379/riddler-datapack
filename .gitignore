@@ -1,0 +1,147 @@
+# ==============================================================================
+# Gitignore for Enigma Data Pack Movie Prop
+# Includes rules for KiCad (PCB), ESP32 Firmware, 3D CAD/Printing, and OS/IDEs
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# KiCad (EDA / PCB Design)
+# ------------------------------------------------------------------------------
+# KiCad 9 local history snapshot directory (contains internal git repository)
+.history/
+**/.history/
+
+# KiCad project-specific local GUI settings (window position, open tabs, zoom)
+*.kicad_prl
+
+# KiCad lock files (created when project or schematics are open)
+*.lck
+~*.lck
+.~lock.*
+
+# KiCad automatic backup directories and zip archives
+*-backups/
+**/*-backups/
+
+# KiCad backup files & autosaves
+*.bak
+*.bck
+*.kicad_pcb-bak
+*.kicad_sch-bak
+*-save.kicad_pcb
+*-save.kicad_sch
+*-save.pro
+_autosave-*
+\#auto_saved_files\#
+*.000
+
+# KiCad footprint cache
+fp-info-cache
+
+# ERC / DRC check reports
+*.rpt
+*-drc.rpt
+*-erc.rpt
+
+# Intermediate netlists & autorouter files
+*.net
+*.dsn
+*.ses
+
+# ------------------------------------------------------------------------------
+# Firmware & Embedded Development (ESP32-S3 / ESP-IDF / PlatformIO / Arduino)
+# ------------------------------------------------------------------------------
+# PlatformIO build outputs and libraries
+.pio/
+.pioenvs/
+.piolibdeps/
+
+# ESP-IDF & CMake build directories
+build/
+**/build/
+cmake-build-*/
+sdkconfig.old
+sdkconfig.ci
+dependencies.lock
+managed_components/
+
+# C / C++ compiled binaries and object files
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dll
+*.dylib
+*.elf
+*.bin
+*.hex
+
+# CMake temporary files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+compile_commands.json
+.ninja_*
+
+# ------------------------------------------------------------------------------
+# 3D Modeling & 3D Printing (CAD / Slicers)
+# ------------------------------------------------------------------------------
+# Blender autosave / backup files
+*.blend1
+*.blend2
+*.blend3
+*.blend@*
+
+# FreeCAD autosaves and backup files
+*.fcbak
+*.fcstd1
+*.fcstd2
+
+# CAD temporary / lock files (SolidWorks, Inventor, etc.)
+~$*
+
+# Slicer machine instructions (keep source 3MF / STL / STEP, ignore G-code)
+*.gcode
+*.gcode.gz
+*.3mf.bak
+
+# ------------------------------------------------------------------------------
+# Editors & IDEs
+# ------------------------------------------------------------------------------
+# Visual Studio Code: ignore local state, keep shared team configs
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# JetBrains / CLion
+.idea/
+
+# ------------------------------------------------------------------------------
+# Operating System Artifacts & Logs
+# ------------------------------------------------------------------------------
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+
+# General logs
+*.log
