@@ -2,7 +2,7 @@
 # Gitignore for Enigma Data Pack Movie Prop
 # Includes rules for KiCad (PCB), ESP32 Firmware, 3D CAD/Printing, and OS/IDEs
 # ==============================================================================
-
+*Gadgets-List.odt
 # ------------------------------------------------------------------------------
 # KiCad (EDA / PCB Design)
 # ------------------------------------------------------------------------------
