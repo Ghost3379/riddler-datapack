@@ -22,14 +22,17 @@ A functional custom PCB for a film prop in the fan film "Robin: Origins". The de
 * **Peripherals:** 
   * USB-C Female (Data & Power)
   * 2x 4-Pin Headers (5V, GND, PWM, WS2812-Data) for fan connections
+* **Schematics:** Full schematic export available as [Riddler-Datapack_v0p5.pdf](docs/circuit%20diagrams/Riddler-Datapack_v0p5.pdf)
 
 ## Visual Reference & In-Game Footage
 
-| Front View | Bottom View ("D-PCK 54") |
+| Front View (Idle / Off) | Front View (Active "ENIGMA" Display & LEDs) |
 | :---: | :---: |
-| ![Front View](docs/pics/in-game-front.png) | ![Bottom View](docs/pics/in-game-bottom.png) |
-| **Side Controls** | **Top Fans & Lighting** |
-| ![Side View](docs/pics/in-game-side.png) | ![Top View](docs/pics/in-game-top-fans.png) |
+| ![Front View Idle](docs/pics/in-game-front.png) | ![Front View Active](docs/pics/in-game-front-active.png) |
+
+| Top Fans & Lighting | Side Controls & Switch | Bottom Dock ("D-PCK 54") |
+| :---: | :---: | :---: |
+| ![Top View](docs/pics/in-game-top-fans.png) | ![Side View](docs/pics/in-game-side.png) | ![Bottom View](docs/pics/in-game-bottom.png) |
 
 ## Sources & Credits
 
