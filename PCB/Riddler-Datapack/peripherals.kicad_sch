@@ -1,0 +1,18 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "eef064ec-88cd-4e88-b216-46175c52a44c")
+	(paper "A4")
+	(lib_symbols)
+	(text "IF NOT SPECIFID IN [0x0x] THEN ALL PASSIVE PARTS ARE IN: [0402]"
+		(exclude_from_sim no)
+		(at 210.82 168.402 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "1e42db25-c93c-4821-a7a0-f52676913bcc")
+	)
+)

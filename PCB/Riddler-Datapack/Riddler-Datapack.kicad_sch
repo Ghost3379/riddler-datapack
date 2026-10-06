@@ -1,0 +1,152 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "28edbdc5-6820-4039-a430-76d2ef240056")
+	(paper "A4")
+	(lib_symbols)
+	(sheet
+		(at 68.58 74.93)
+		(size 48.26 33.02)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "0474ea99-fd87-4f5b-aad2-24dbc9680bc4")
+		(property "Sheetname" "Power"
+			(at 68.58 74.2184 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "power.kicad_sch"
+			(at 68.58 108.5346 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Riddler-Datapack"
+				(path "/28edbdc5-6820-4039-a430-76d2ef240056"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 153.67 76.2)
+		(size 54.61 38.1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "3a78c202-f18f-49be-8cf2-29b2d774bbf9")
+		(property "Sheetname" "Logic"
+			(at 153.67 75.4884 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "logic.kicad_sch"
+			(at 153.67 114.8846 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Riddler-Datapack"
+				(path "/28edbdc5-6820-4039-a430-76d2ef240056"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 106.68 127)
+		(size 44.45 30.48)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "b425ae70-53c6-43cb-8b02-cec8e7b22861")
+		(property "Sheetname" "Peripherals"
+			(at 106.68 126.2884 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "peripherals.kicad_sch"
+			(at 106.68 158.0646 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Riddler-Datapack"
+				(path "/28edbdc5-6820-4039-a430-76d2ef240056"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)
