@@ -1,0 +1,601 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "28edbdc5-6820-4039-a430-76d2ef240056")
+	(paper "A4")
+	(lib_symbols)
+	(wire
+		(pts
+			(xy 152.4 119.38) (xy 175.26 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0ed4e81e-b4a0-434f-852e-989cb603e17a")
+	)
+	(wire
+		(pts
+			(xy 152.4 102.87) (xy 175.26 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2f65851b-5ed4-4cd9-9958-6363c85ed92c")
+	)
+	(wire
+		(pts
+			(xy 152.4 88.9) (xy 175.26 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3c3f5cde-8859-45cf-b6e5-7e4d51e61f01")
+	)
+	(wire
+		(pts
+			(xy 93.98 123.19) (xy 101.6 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3f865151-17ec-466f-8801-4c9651179cca")
+	)
+	(wire
+		(pts
+			(xy 152.4 96.52) (xy 175.26 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5e8b61b1-8bbd-43df-a896-c4505655c2fa")
+	)
+	(wire
+		(pts
+			(xy 152.4 86.36) (xy 175.26 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "625385ca-1cb7-4dcb-85e1-76a45b6c0f41")
+	)
+	(wire
+		(pts
+			(xy 152.4 110.49) (xy 175.26 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "664f3bdf-0174-4340-8123-b3f5b37ae41a")
+	)
+	(wire
+		(pts
+			(xy 152.4 107.95) (xy 175.26 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6b216529-0633-4835-8f63-18a4095dc5c9")
+	)
+	(wire
+		(pts
+			(xy 152.4 91.44) (xy 175.26 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9c166fc2-cc68-4dd0-bb21-11529cee8c7c")
+	)
+	(wire
+		(pts
+			(xy 152.4 93.98) (xy 175.26 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a14941f0-ebd8-4f6a-8ba4-696a3e0c5b45")
+	)
+	(wire
+		(pts
+			(xy 152.4 115.57) (xy 175.26 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a73b82bd-8633-4106-bac3-6b3b45e26260")
+	)
+	(wire
+		(pts
+			(xy 152.4 113.03) (xy 175.26 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "afa8f2d8-2751-4dd2-87c8-a00fb5860247")
+	)
+	(wire
+		(pts
+			(xy 152.4 99.06) (xy 175.26 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cfdc3ac0-a638-4d46-89fc-1377cf145371")
+	)
+	(wire
+		(pts
+			(xy 93.98 120.65) (xy 101.6 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dc6b7cdb-c98f-4984-9188-6fa3aa525b03")
+	)
+	(wire
+		(pts
+			(xy 152.4 105.41) (xy 175.26 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f0a2298b-0ab8-467b-a0d9-04c4becdeab2")
+	)
+	(sheet
+		(at 68.58 101.6)
+		(size 25.4 25.4)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "0474ea99-fd87-4f5b-aad2-24dbc9680bc4")
+		(property "Sheetname" "Power"
+			(at 68.326 101.346 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "power.kicad_sch"
+			(at 68.58 128.016 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "D+" bidirectional
+			(at 93.98 120.65 0)
+			(uuid "7d1ce7ff-8313-431f-9647-e616e52544e4")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "D-" bidirectional
+			(at 93.98 123.19 0)
+			(uuid "4ce01fc8-0d79-4f08-bac7-2a2d0d0ba1c7")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "Riddler-Datapack mini"
+				(path "/28edbdc5-6820-4039-a430-76d2ef240056"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 101.6 76.2)
+		(size 50.8 63.5)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "3a78c202-f18f-49be-8cf2-29b2d774bbf9")
+		(property "Sheetname" "Logic"
+			(at 101.6 75.4884 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "logic.kicad_sch"
+			(at 101.6 140.2846 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "D+" bidirectional
+			(at 101.6 120.65 180)
+			(uuid "23bf7730-1f0d-4277-b2a0-f12a104157bd")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "D-" bidirectional
+			(at 101.6 123.19 180)
+			(uuid "411947fe-4fff-4568-b6ad-4d0a4c5477df")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "SD_MISO" input
+			(at 152.4 115.57 0)
+			(uuid "d4124fcd-157f-4312-8298-9b4092de25f9")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "CS_SD" output
+			(at 152.4 105.41 0)
+			(uuid "62191765-f1a7-49bd-9d75-ef9ce2f2f303")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "CS_TFT" output
+			(at 152.4 86.36 0)
+			(uuid "0b0c8a70-2508-4ef0-af4b-4a2410aaa152")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "DC" output
+			(at 152.4 88.9 0)
+			(uuid "d2d3c44d-3d7f-4874-9c09-af3c1ba3e406")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "DOUT_NPM" output
+			(at 152.4 119.38 0)
+			(uuid "48227840-b2c3-455a-b43f-c09922830df5")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "MOSI" output
+			(at 152.4 96.52 0)
+			(uuid "7221cfbc-78a8-4eb6-844c-b77bcfd7e6c2")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "PWM_TFT" output
+			(at 152.4 99.06 0)
+			(uuid "485a6a66-8151-4497-8dcf-3db1e000185f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "RST" output
+			(at 152.4 91.44 0)
+			(uuid "d8e830ba-e814-4702-a9bd-d463c2761e5d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "SCK" output
+			(at 152.4 93.98 0)
+			(uuid "66e42a64-d8f2-4a5c-be3d-d9f3c652409d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "SD_CLK" output
+			(at 152.4 102.87 0)
+			(uuid "2fd09cdd-4849-470d-9999-7365dfb36a9b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "SD_DAT1" output
+			(at 152.4 110.49 0)
+			(uuid "55448126-4d13-4bd3-8e1f-89ec87f8bd66")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "SD_DAT2" output
+			(at 152.4 107.95 0)
+			(uuid "13c3eb28-4e88-4d72-a2cd-303408e3d177")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "SD_MOSI" output
+			(at 152.4 113.03 0)
+			(uuid "5e2121a7-6540-4567-9c8c-0326fd0cff54")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "Riddler-Datapack mini"
+				(path "/28edbdc5-6820-4039-a430-76d2ef240056"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 175.26 76.2)
+		(size 25.4 63.5)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "b425ae70-53c6-43cb-8b02-cec8e7b22861")
+		(property "Sheetname" "Peripherals"
+			(at 175.26 75.4884 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "peripherals.kicad_sch"
+			(at 175.26 140.2846 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "CS_SD" input
+			(at 175.26 105.41 180)
+			(uuid "f67a1712-485e-4a16-97e6-e4a264376806")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "SD_CLK" input
+			(at 175.26 102.87 180)
+			(uuid "002b021a-25c5-42bd-ba13-8ee85dc03aa4")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "SD_DAT1" input
+			(at 175.26 110.49 180)
+			(uuid "647a9040-2810-45f6-b710-c5c91a02ae8b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "CLK" input
+			(at 175.26 93.98 180)
+			(uuid "bfb69840-1db1-40d8-8b90-71a5e645cea6")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "CS_TFT" input
+			(at 175.26 86.36 180)
+			(uuid "111f6465-2aa9-4a6f-9c1d-2e2d839a05e1")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "DC" input
+			(at 175.26 88.9 180)
+			(uuid "634631b8-c8fe-4b68-ba35-e3f8a9bfd320")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "DIN_NPM" input
+			(at 175.26 119.38 180)
+			(uuid "9a499e17-b634-4007-9824-b9a00b2b3e9e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "MOSI" input
+			(at 175.26 96.52 180)
+			(uuid "3e9d692e-5ccf-432e-a0df-96f041963ab1")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "PWM_TFT" input
+			(at 175.26 99.06 180)
+			(uuid "0c2bb08d-2ebe-41a3-ae0b-2998f501fdb0")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "RST" input
+			(at 175.26 91.44 180)
+			(uuid "7581891b-2699-4679-82f9-55db7e0d7831")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "SD_DAT2" input
+			(at 175.26 107.95 180)
+			(uuid "cd1066d0-da1b-4428-a49b-d4177f267aee")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "SD_MISO" input
+			(at 175.26 115.57 180)
+			(uuid "313181d4-a861-47e0-9c16-0f6f405de50e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "SD_MOSI" input
+			(at 175.26 113.03 180)
+			(uuid "49e41f56-85bb-4c20-a4a1-bcd1e4461c1f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "Riddler-Datapack mini"
+				(path "/28edbdc5-6820-4039-a430-76d2ef240056"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)
