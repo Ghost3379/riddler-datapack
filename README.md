@@ -10,17 +10,18 @@ A functional custom electronic prop for the indie fan film *"Robin: Origins"*. T
 
 The project contains two distinct hardware designs:
 
-1. **Mini Version (Movie Prop - In Production):** An ultra-compact, stunt-safe, pocket-sized tactical drive (~85 × 57 × 12 mm, inspired by rugged portable SSDs like the Samsung T7 Shield). Tailored specifically for the film's action scenes and PC terminal connection.
+1. **Mini Version (Movie Prop - In Production):** An ultra-compact, stunt-safe, pocket-sized tactical drive (~120 × 65 × 20 mm; PCB: 68 × 50 mm, inspired by rugged portable SSDs like the Samsung T7 Shield). Tailored specifically for the film's action scenes and PC terminal connection.
 2. **Full-Size Replica Version:** A heavy, 1:1 scale Arkham military cartridge featuring dual active 40mm cooling fans, internal LiPo battery charging, and full power-rail boost converters.
 
 ---
 
 ### 1. Mini Version (Movie Hero Prop)
-> Located in: [`PCB/Mini Version/Riddler-Datapack mini/`](PCB/Mini%20Version/Riddler-Datapack%20mini/)
+> Located in: [`PCB/Mini Version/Riddler-Datapack mini/`](PCB/Mini%20Version/Riddler-Datapack%20mini/)  
+> Full schematic export: [Riddler-Datapack-mini_v1p0.pdf](docs/circuit%20diagrams/Mini/Riddler-Datapack-mini_v1p0.pdf)
 
 Optimized for durability, pocket portability during physical stunt chases, and reliable on-set PC docking:
 
-* **Form Factor:** Compact 60 × 45 mm PCB inside an ~85 × 57 mm enclosure with chamfered `PCIe NVMe` nose cone and front grille vents.
+* **Form Factor:** 4-layer 68 × 50 mm PCB inside a 120 × 65 × 20 mm enclosure with chamfered `PCIe NVMe` base shoe, 7-slot front faceplate grille, and side cooling louvers.
 * **Microcontroller:** ESP32-S3-MINI-1 (dual-core, native USB OTG, onboard PCB antenna).
 * **Power Architecture:** Purely bus-powered via USB-C (5V VBUS). High-efficiency TLV62568 synchronous step-down buck converter supplies 3.3V @ up to 1A. No internal LiPo batteries required on set, eliminating safety risks and battery downtime.
 * **Storage:** MicroSD card socket wired via high-speed **4-bit SDMMC** with hardware pull-ups (4.7kΩ) for fast read/write speeds when mounted as a USB Mass Storage (MSC) drive.
@@ -32,7 +33,7 @@ Optimized for durability, pocket portability during physical stunt chases, and r
 
 ### 2. Full-Size Replica Version
 > Located in: [`PCB/Riddler-Datapack/`](PCB/Riddler-Datapack/)  
-> Full schematic export: [Riddler-Datapack_v0p5.pdf](docs/circuit%20diagrams/Riddler-Datapack_v0p5.pdf)
+> Full schematic export: [Riddler-Datapack_v0p5.pdf](docs/circuit%20diagrams/Full%20size/Riddler-Datapack_v0p5.pdf)
 
 The full-scale desktop/showcase replica with complete internal subsystem autonomy:
 

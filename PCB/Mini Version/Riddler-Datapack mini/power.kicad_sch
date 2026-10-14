@@ -2139,7 +2139,7 @@
 		)
 		(uuid "5cefbfd2-9f5c-494d-afd9-6423bafb7d5e")
 	)
-	(text "ATTENTION FOR L1 & L2: \nI HIGHLY RECOMMAND \nUSING A SHIELDED COIL\nTO REDUCE EMI"
+	(text "ATTENTION FOR L1: \nI HIGHLY RECOMMAND \nUSING A SHIELDED COIL\nTO REDUCE EMI"
 		(exclude_from_sim no)
 		(at 115.57 38.1 0)
 		(effects
