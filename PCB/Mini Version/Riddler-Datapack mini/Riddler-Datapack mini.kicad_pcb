@@ -427,7 +427,7 @@
 			(uuid "22c28230-3cea-4945-8c13-f7bb46d407fe")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/LED_SMD.3dshapes/LED_WS2812B-2020_PLCC4_2.0x2.0mm.step"
+		(model "${KICAD10_3DMODEL_DIR}G:/My Drive/10-Gotham Project/15-Tools/156-Tool Librarys/KiCad/Global 3Dmodels/WS2812B2020.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -3348,7 +3348,7 @@
 			(uuid "ca3e5efa-bcf2-4ef1-84f4-9462d9773334")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/LED_SMD.3dshapes/LED_WS2812B-2020_PLCC4_2.0x2.0mm.step"
+		(model "${KICAD10_3DMODEL_DIR}G:/My Drive/10-Gotham Project/15-Tools/156-Tool Librarys/KiCad/Global 3Dmodels/WS2812B2020.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -4421,7 +4421,7 @@
 			(uuid "3e3ca9bf-2f3f-4328-9931-ad5e47ccd1bd")
 		)
 		(embedded_fonts no)
-		(model "${AW3DMODELS}/UJ20-C-H-G-SMT-1-P16-TR.step"
+		(model "${AW3DMODELS}G:/My Drive/10-Gotham Project/15-Tools/156-Tool Librarys/KiCad/Global 3Dmodels/UJ20-C-H-G-SMT-1-P16-TR.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -5028,7 +5028,7 @@
 			(uuid "cee56f3f-51d3-41df-8e28-22c392d3fc43")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/LED_SMD.3dshapes/LED_WS2812B-2020_PLCC4_2.0x2.0mm.step"
+		(model "${KICAD10_3DMODEL_DIR}G:/My Drive/10-Gotham Project/15-Tools/156-Tool Librarys/KiCad/Global 3Dmodels/WS2812B2020.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -5804,7 +5804,7 @@
 			(uuid "738cb10c-deb2-45b0-82c6-1f4bb1797a4a")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/LED_SMD.3dshapes/LED_WS2812B-2020_PLCC4_2.0x2.0mm.step"
+		(model "${KICAD10_3DMODEL_DIR}G:/My Drive/10-Gotham Project/15-Tools/156-Tool Librarys/KiCad/Global 3Dmodels/WS2812B2020.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -6095,7 +6095,7 @@
 			(uuid "bf3e24bb-4c62-4f16-b9ff-1a18b24047fa")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/LED_SMD.3dshapes/LED_WS2812B-2020_PLCC4_2.0x2.0mm.step"
+		(model "${KICAD10_3DMODEL_DIR}G:/My Drive/10-Gotham Project/15-Tools/156-Tool Librarys/KiCad/Global 3Dmodels/WS2812B2020.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -6834,7 +6834,7 @@
 			(uuid "b58a22cb-fad0-4892-ba3f-b3eae37801b0")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/LED_SMD.3dshapes/LED_WS2812B-2020_PLCC4_2.0x2.0mm.step"
+		(model "${KICAD10_3DMODEL_DIR}G:/My Drive/10-Gotham Project/15-Tools/156-Tool Librarys/KiCad/Global 3Dmodels/WS2812B2020.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -7441,7 +7441,7 @@
 			(uuid "185df296-a495-4bfd-956a-55c4ea764ed9")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/LED_SMD.3dshapes/LED_WS2812B-2020_PLCC4_2.0x2.0mm.step"
+		(model "${KICAD10_3DMODEL_DIR}G:/My Drive/10-Gotham Project/15-Tools/156-Tool Librarys/KiCad/Global 3Dmodels/WS2812B2020.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -7730,7 +7730,7 @@
 			(uuid "490df085-4a4f-43cd-b844-a6bc86c135be")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/LED_SMD.3dshapes/LED_WS2812B-2020_PLCC4_2.0x2.0mm.step"
+		(model "${KICAD10_3DMODEL_DIR}G:/My Drive/10-Gotham Project/15-Tools/156-Tool Librarys/KiCad/Global 3Dmodels/WS2812B2020.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -8851,7 +8851,7 @@
 				(xyz 0 0 0)
 			)
 		)
-		(model "C:/Users/i40011169/LOCAL Docs/GIT/Riddler Datapack/PCB/External Footprints&Symbols/3d/ESP32-S3-MINI-1-N8.STEP"
+		(model "G:/My Drive/10-Gotham Project/15-Tools/156-Tool Librarys/KiCad/Global 3Dmodels/ESP32-S3-MINI-1-N8.STEP"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -10809,7 +10809,7 @@
 			(uuid "f705e896-6021-4c89-b54b-37c7973eb1c5")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/LED_SMD.3dshapes/LED_WS2812B-2020_PLCC4_2.0x2.0mm.step"
+		(model "${KICAD10_3DMODEL_DIR}G:/My Drive/10-Gotham Project/15-Tools/156-Tool Librarys/KiCad/Global 3Dmodels/WS2812B2020.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -12698,7 +12698,7 @@
 			(uuid "56b146de-0ffa-494d-96eb-1e8a63a9e149")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/LED_SMD.3dshapes/LED_WS2812B-2020_PLCC4_2.0x2.0mm.step"
+		(model "${KICAD10_3DMODEL_DIR}G:/My Drive/10-Gotham Project/15-Tools/156-Tool Librarys/KiCad/Global 3Dmodels/WS2812B2020.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -13148,7 +13148,7 @@
 			(uuid "fefb2461-c96a-46db-a0b8-9341afee47aa")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/LED_SMD.3dshapes/LED_WS2812B-2020_PLCC4_2.0x2.0mm.step"
+		(model "${KICAD10_3DMODEL_DIR}G:/My Drive/10-Gotham Project/15-Tools/156-Tool Librarys/KiCad/Global 3Dmodels/WS2812B2020.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -14222,7 +14222,7 @@
 				(xyz 0 0 0)
 			)
 		)
-		(model "C:/Users/i40011169/LOCAL Docs/GIT/Riddler Datapack/PCB/External Footprints&Symbols/3d/Download_STP_693072010801_rev1.stp"
+		(model "G:/My Drive/10-Gotham Project/15-Tools/156-Tool Librarys/KiCad/Global 3Dmodels/Download_STP_693072010801_rev1.stp"
 			(offset
 				(xyz 0 -1.25 0)
 			)
@@ -14670,7 +14670,7 @@
 			(uuid "ad497b96-62c5-426d-917e-00174e35ac0f")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/LED_SMD.3dshapes/LED_WS2812B-2020_PLCC4_2.0x2.0mm.step"
+		(model "${KICAD10_3DMODEL_DIR}G:/My Drive/10-Gotham Project/15-Tools/156-Tool Librarys/KiCad/Global 3Dmodels/WS2812B2020.step"
 			(offset
 				(xyz 0 0 0)
 			)
