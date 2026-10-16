@@ -7,6 +7,16 @@
 	(lib_symbols)
 	(wire
 		(pts
+			(xy 118.11 36.83) (xy 140.97 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0549424c-8c20-49f9-a40a-b42d8f275de4")
+	)
+	(wire
+		(pts
 			(xy 118.11 77.47) (xy 140.97 77.47)
 		)
 		(stroke
@@ -27,7 +37,7 @@
 	)
 	(wire
 		(pts
-			(xy 118.11 44.45) (xy 140.97 44.45)
+			(xy 118.11 41.91) (xy 140.97 41.91)
 		)
 		(stroke
 			(width 0)
@@ -44,6 +54,16 @@
 			(type default)
 		)
 		(uuid "3f865151-17ec-466f-8801-4c9651179cca")
+	)
+	(wire
+		(pts
+			(xy 118.11 49.53) (xy 140.97 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "40bdba5f-867a-4e7e-ba7e-e337e543e9ca")
 	)
 	(wire
 		(pts
@@ -67,7 +87,7 @@
 	)
 	(wire
 		(pts
-			(xy 118.11 41.91) (xy 140.97 41.91)
+			(xy 118.11 39.37) (xy 140.97 39.37)
 		)
 		(stroke
 			(width 0)
@@ -97,7 +117,7 @@
 	)
 	(wire
 		(pts
-			(xy 118.11 46.99) (xy 140.97 46.99)
+			(xy 118.11 44.45) (xy 140.97 44.45)
 		)
 		(stroke
 			(width 0)
@@ -107,7 +127,7 @@
 	)
 	(wire
 		(pts
-			(xy 118.11 49.53) (xy 140.97 49.53)
+			(xy 118.11 46.99) (xy 140.97 46.99)
 		)
 		(stroke
 			(width 0)
@@ -329,7 +349,7 @@
 			)
 		)
 		(pin "CS_TFT" output
-			(at 118.11 41.91 0)
+			(at 118.11 39.37 0)
 			(uuid "0b0c8a70-2508-4ef0-af4b-4a2410aaa152")
 			(effects
 				(font
@@ -339,7 +359,7 @@
 			)
 		)
 		(pin "DC" output
-			(at 118.11 44.45 0)
+			(at 118.11 41.91 0)
 			(uuid "d2d3c44d-3d7f-4874-9c09-af3c1ba3e406")
 			(effects
 				(font
@@ -369,7 +389,7 @@
 			)
 		)
 		(pin "RST" output
-			(at 118.11 46.99 0)
+			(at 118.11 44.45 0)
 			(uuid "d8e830ba-e814-4702-a9bd-d463c2761e5d")
 			(effects
 				(font
@@ -379,7 +399,7 @@
 			)
 		)
 		(pin "SCK" output
-			(at 118.11 49.53 0)
+			(at 118.11 46.99 0)
 			(uuid "66e42a64-d8f2-4a5c-be3d-d9f3c652409d")
 			(effects
 				(font
@@ -468,6 +488,26 @@
 				(justify right)
 			)
 		)
+		(pin "CS_SD2" output
+			(at 118.11 36.83 0)
+			(uuid "ab627dbe-6e51-4768-a7c4-5b03f9ef1f00")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "MISO" input
+			(at 118.11 49.53 0)
+			(uuid "93ae3f04-94c1-4633-9937-6f12a483a367")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
 		(instances
 			(project "Riddler-Datapack mini"
 				(path "/28edbdc5-6820-4039-a430-76d2ef240056"
@@ -545,7 +585,7 @@
 			)
 		)
 		(pin "CLK" input
-			(at 140.97 49.53 180)
+			(at 140.97 46.99 180)
 			(uuid "bfb69840-1db1-40d8-8b90-71a5e645cea6")
 			(effects
 				(font
@@ -555,7 +595,7 @@
 			)
 		)
 		(pin "CS_TFT" input
-			(at 140.97 41.91 180)
+			(at 140.97 39.37 180)
 			(uuid "111f6465-2aa9-4a6f-9c1d-2e2d839a05e1")
 			(effects
 				(font
@@ -565,7 +605,7 @@
 			)
 		)
 		(pin "DC" input
-			(at 140.97 44.45 180)
+			(at 140.97 41.91 180)
 			(uuid "634631b8-c8fe-4b68-ba35-e3f8a9bfd320")
 			(effects
 				(font
@@ -595,7 +635,7 @@
 			)
 		)
 		(pin "RST" input
-			(at 140.97 46.99 180)
+			(at 140.97 44.45 180)
 			(uuid "7581891b-2699-4679-82f9-55db7e0d7831")
 			(effects
 				(font
@@ -667,6 +707,26 @@
 		(pin "NPD_RS" input
 			(at 140.97 85.09 180)
 			(uuid "30596c21-11cc-49cd-999d-f4d979d052bb")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "CS_SD2" input
+			(at 140.97 36.83 180)
+			(uuid "ea439bf4-3c23-4256-a5f0-0d8fd95d7322")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "MISO" output
+			(at 140.97 49.53 180)
+			(uuid "a0b882d1-1155-482c-acfe-5c4d80b7c559")
 			(effects
 				(font
 					(size 1.27 1.27)

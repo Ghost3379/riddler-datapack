@@ -2127,6 +2127,16 @@
 	)
 	(wire
 		(pts
+			(xy 86.36 60.96) (xy 101.6 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1bee08b6-3edf-41f7-9a69-7a5d4e184d81")
+	)
+	(wire
+		(pts
 			(xy 147.32 54.61) (xy 147.32 55.88)
 		)
 		(stroke
@@ -2214,6 +2224,16 @@
 			(type default)
 		)
 		(uuid "40894c6e-1131-4c75-8767-cbdfaa76ef5b")
+	)
+	(wire
+		(pts
+			(xy 86.36 93.98) (xy 101.6 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4c835b75-8254-452b-ac6d-5c2e69f5888c")
 	)
 	(wire
 		(pts
@@ -2713,6 +2733,17 @@
 		)
 		(uuid "916b2c10-c044-466e-b626-c1cc6d8049a1")
 	)
+	(hierarchical_label "MISO"
+		(shape input)
+		(at 101.6 60.96 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "a5ca07bf-312e-45fe-a347-d69d0f934929")
+	)
 	(hierarchical_label "MOSI"
 		(shape output)
 		(at 101.6 66.04 0)
@@ -2767,6 +2798,17 @@
 			(justify right)
 		)
 		(uuid "d81d7619-6af5-406b-a386-475cd9599b09")
+	)
+	(hierarchical_label "CS_SD2"
+		(shape output)
+		(at 101.6 93.98 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "e203a1e6-c6c9-495b-84d9-11ac9f91595e")
 	)
 	(hierarchical_label "SD_CLK"
 		(shape output)

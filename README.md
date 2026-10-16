@@ -17,7 +17,7 @@ The project contains two distinct hardware designs:
 
 ### 1. Mini Version (Movie Hero Prop)
 > Located in: [`PCB/Mini Version/Riddler-Datapack mini/`](PCB/Mini%20Version/Riddler-Datapack%20mini/)  
-> Full schematic export: [Riddler-Datapack-mini_v1p0.pdf](docs/circuit%20diagrams/Mini/Riddler-Datapack-mini_v1p0.pdf)
+> Full schematic export: [Riddler-Datapack-mini_v1p1.pdf](docs/circuit%20diagrams/Mini/Riddler-Datapack-mini_v1p1.pdf)
 
 Optimized for durability, pocket portability during physical stunt chases, and reliable on-set PC docking:
 
