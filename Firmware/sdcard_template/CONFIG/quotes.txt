@@ -1,0 +1,19 @@
+# ==============================================================================
+# ENIGMA DATAPACK - QUOTES & RIDDLES DATABASE
+# Add as many quotes, riddles, or movie lines as you like (one per line).
+# Lines beginning with # are ignored.
+# ==============================================================================
+
+Riddle me this: What is black and blue, and dead all over?
+I am a question with no answer, until you look behind you.
+If you are justice, please do not lie. What is the price for your blind eye?
+GCPD ARCHIVE ENCRYPTION: LEVEL 5 // OVERRIDE ACCEPTED
+Hope is a bird that sings in the dark. Silence it.
+Wayne Enterprises Patent Registry: COVERT ACCESS GRANTED
+What does a liar do when he's dead? He lies still.
+You think you've solved it, detective? The game has only just begun.
+Arkham Asylum inmate #4492-B: CONFIDENTIAL TRANSFER FILE
+Fear is a tool. When that light hits the sky, it's not just a call... it's a warning.
+The less of them you have, the more one is worth. (Friends)
+I can be cracked. I can be made. I can be told. I can be played. What am I? (A Joke)
+It can be cruel, poetic, or blind. But when it's denied, violence is what you find. (Justice)
