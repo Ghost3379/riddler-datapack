@@ -8,11 +8,11 @@ void LedEngine::begin(const PropConfig& config) {
     _ambientHue = config.ambient_hue;
     _pulseBpm   = config.pulse_speed;
 
-    // Initialize 4 separate WS2812B physical channels
-    FastLED.addLeds<WS2812B, PIN_LED_FRONT, GRB>(_leds_front, NUM_LEDS_FRONT);
-    FastLED.addLeds<WS2812B, PIN_LED_RIGHT, GRB>(_leds_right, NUM_LEDS_RIGHT);
-    FastLED.addLeds<WS2812B, PIN_LED_LEFT,  GRB>(_leds_left,  NUM_LEDS_LEFT);
-    FastLED.addLeds<WS2812B, PIN_LED_REAR,  GRB>(_leds_rear,  NUM_LEDS_REAR);
+    // Initialize 4 separate WS2812B physical channels (BRG byte order for 2020 LEDs)
+    FastLED.addLeds<WS2812B, PIN_LED_FRONT, BRG>(_leds_front, NUM_LEDS_FRONT);
+    FastLED.addLeds<WS2812B, PIN_LED_RIGHT, BRG>(_leds_right, NUM_LEDS_RIGHT);
+    FastLED.addLeds<WS2812B, PIN_LED_LEFT,  BRG>(_leds_left,  NUM_LEDS_LEFT);
+    FastLED.addLeds<WS2812B, PIN_LED_REAR,  BRG>(_leds_rear,  NUM_LEDS_REAR);
 
     FastLED.setBrightness(_brightness);
     FastLED.clear(true);

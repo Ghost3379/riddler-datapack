@@ -16,7 +16,7 @@ void DisplayEngine::begin(QuotesManager* quotesManager) {
     _quotesManager = quotesManager;
 
     _lcd.init();
-    _lcd.setRotation(1); // Landscape (240 x 135)
+    _lcd.setRotation(3); // Landscape flipped 180 degrees (240 x 135)
     _lcd.setBrightness(quotesManager ? quotesManager->getConfig().display_brightness : 85);
     _lcd.fillScreen(COLOR_BG);
 
