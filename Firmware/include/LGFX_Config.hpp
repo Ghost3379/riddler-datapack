@@ -4,13 +4,13 @@
 #include <LovyanGFX.hpp>
 #include "Config.hpp"
 
-class LGFX : public lgfx::LGFX_Device {
+class LGFX_Mini : public lgfx::LGFX_Device {
     lgfx::Panel_ST7789 _panel_instance;
     lgfx::Bus_SPI      _bus_instance;
     lgfx::Light_PWM    _light_instance;
 
 public:
-    LGFX(void) {
+    LGFX_Mini(void) {
         {
             auto cfg = _bus_instance.config();
             cfg.spi_host   = SPI2_HOST;     // FSPI on ESP32-S3

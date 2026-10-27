@@ -24,7 +24,7 @@ private:
     void renderCenterVisuals();
     void renderBottomTicker();
 
-    LGFX _lcd;
+    LGFX_Mini _lcd;
     LGFX_Sprite _canvas;
     QuotesManager* _quotesManager = nullptr;
 

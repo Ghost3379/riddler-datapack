@@ -2,6 +2,15 @@
 #include "USB.h"
 #include "USBMSC.h"
 #include "SD_MMC.h"
+#include "sdmmc_cmd.h"
+
+// Accessor for protected _card pointer in SDMMCFS
+class SDMMC_CardAccessor : public fs::SDMMCFS {
+public:
+    static sdmmc_card_t* getCard(fs::SDMMCFS& sd) {
+        return ((SDMMC_CardAccessor*)&sd)->_card;
+    }
+};
 
 StorageManager* StorageManager::_instance = nullptr;
 static USBMSC msc;
@@ -17,12 +26,12 @@ int32_t StorageManager::onMscRead(uint32_t lba, uint32_t offset, void* buffer, u
         _instance->_activityCallback(false); // Read activity
     }
 
+    sdmmc_card_t* card = SDMMC_CardAccessor::getCard(SD_MMC);
+    if (!card) return -1;
+
     uint32_t sectors = bufsize / 512;
-    uint8_t* ptr = (uint8_t*)buffer;
-    for (uint32_t i = 0; i < sectors; i++) {
-        if (!SD_MMC.readRAW(ptr + (i * 512), lba + i)) {
-            return -1;
-        }
+    if (sdmmc_read_sectors(card, buffer, lba, sectors) != ESP_OK) {
+        return -1;
     }
     return bufsize;
 }
@@ -37,11 +46,12 @@ int32_t StorageManager::onMscWrite(uint32_t lba, uint32_t offset, uint8_t* buffe
         _instance->_activityCallback(true); // Write activity
     }
 
+    sdmmc_card_t* card = SDMMC_CardAccessor::getCard(SD_MMC);
+    if (!card) return -1;
+
     uint32_t sectors = bufsize / 512;
-    for (uint32_t i = 0; i < sectors; i++) {
-        if (!SD_MMC.writeRAW(buffer + (i * 512), lba + i)) {
-            return -1;
-        }
+    if (sdmmc_write_sectors(card, buffer, lba, sectors) != ESP_OK) {
+        return -1;
     }
     return bufsize;
 }
