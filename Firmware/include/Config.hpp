@@ -48,9 +48,9 @@
 
 // --- USB Identifiers ---
 #define USB_VENDOR_ID     "GOTHAM"
-#define USB_PRODUCT_ID    "ENIGMA_DRIVE"
+#define USB_PRODUCT_ID    "ENIGMA"
 #define USB_REVISION      "1.0"
-#define USB_VOLUME_LABEL  "ENIGMA_DATA"
+#define USB_VOLUME_LABEL  "ENIGMA"
 
 // ==============================================================================
 // CONFIGURATION DEFAULTS
@@ -59,6 +59,8 @@ struct PropConfig {
     uint8_t  display_brightness = 85;       // 10 - 100%
     uint8_t  led_brightness     = 38;       // 15% brightness (0 - 255)
     uint8_t  ticker_speed       = 2;        // 1 (slow) to 8 (fast)
+    float    quote_delay_min    = 1.5f;     // Minimum pause between quotes in seconds (e.g. 0.5s or random(5,10))
+    float    quote_delay_max    = 1.5f;     // Maximum pause between quotes in seconds
     uint8_t  ambient_hue        = 96;       // 96 = Arkham Emerald Green (0-255 HSV)
     uint8_t  pulse_speed        = 14;       // Beats per minute for idle breath
     bool     show_waveform      = true;     // Show dynamic Arkham oscilloscope

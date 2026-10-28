@@ -1,41 +1,51 @@
 #include "LedEngine.hpp"
 #include <math.h>
 
-LedEngine::LedEngine() {
+LedEngine::LedEngine()
+    : _strip_front(NUM_LEDS_FRONT, PIN_LED_FRONT, NEO_GRB + NEO_KHZ800),
+      _strip_right(NUM_LEDS_RIGHT, PIN_LED_RIGHT, NEO_GRB + NEO_KHZ800),
+      _strip_left(NUM_LEDS_LEFT,   PIN_LED_LEFT,  NEO_GRB + NEO_KHZ800),
+      _strip_rear(NUM_LEDS_REAR,   PIN_LED_REAR,  NEO_GRB + NEO_KHZ800) {
 }
 
-void LedEngine::begin(const PropConfig& config) {
-    _brightness = config.led_brightness;
-    _ambientHue = config.ambient_hue;
-    _pulseBpm   = config.pulse_speed;
-
-    // Initialize 4 separate WS2812B channels using Adafruit_NeoPixel (NEO_GRB 800kHz)
-    _strip_front = Adafruit_NeoPixel(NUM_LEDS_FRONT, PIN_LED_FRONT, NEO_GRB + NEO_KHZ800);
-    _strip_right = Adafruit_NeoPixel(NUM_LEDS_RIGHT, PIN_LED_RIGHT, NEO_GRB + NEO_KHZ800);
-    _strip_left  = Adafruit_NeoPixel(NUM_LEDS_LEFT,  PIN_LED_LEFT,  NEO_GRB + NEO_KHZ800);
-    _strip_rear  = Adafruit_NeoPixel(NUM_LEDS_REAR,  PIN_LED_REAR,  NEO_GRB + NEO_KHZ800);
-
+void LedEngine::initOff() {
     _strip_front.begin();
     _strip_right.begin();
     _strip_left.begin();
     _strip_rear.begin();
 
-    setBrightness(_brightness);
-
-    // Initial clear
     _strip_front.clear();
     _strip_right.clear();
     _strip_left.clear();
     _strip_rear.clear();
+
     _strip_front.show();
     _strip_right.show();
     _strip_left.show();
     _strip_rear.show();
+}
 
-    Serial.println("[LED] 12x WS2812B initialized with Adafruit_NeoPixel (15% Brightness).");
+void LedEngine::begin(const PropConfig& config) {
+    _brightness  = config.led_brightness;
+    _ambientHue  = config.ambient_hue;
+    _pulseBpm    = config.pulse_speed;
+    _flickerOnIo = config.flicker_on_io;
+
+    initOff();
+    applyConfig(config);
+
+    Serial.println("[LED] 12x WS2812B initialized (all strips cleared OFF at boot).");
+}
+
+void LedEngine::applyConfig(const PropConfig& config) {
+    setBrightness(config.led_brightness);
+    setAmbientHue(config.ambient_hue);
+    setPulseSpeed(config.pulse_speed);
+    setFlickerOnIo(config.flicker_on_io);
 }
 
 void LedEngine::triggerDiskActivity(bool is_write) {
+    if (!_flickerOnIo) return;
     float boost = is_write ? 1.0f : 0.7f;
     if (_activityLevel < boost) {
         _activityLevel = boost;

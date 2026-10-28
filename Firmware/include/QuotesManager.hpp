@@ -17,6 +17,7 @@ public:
     // Configuration access
     const PropConfig& getConfig() const { return _config; }
     void setBrightness(uint8_t brightness);
+    uint32_t getNextQuoteDelayMs() const;
 
     // Quotes access
     size_t getQuoteCount() const { return _quotes.size(); }
@@ -24,12 +25,18 @@ public:
     String getNextQuote();
     String getRandomQuote();
 
+    // Status
+    bool isSdMounted() const { return _sdLoaded; }
+
 private:
     void ensureDefaultFiles();
     bool loadConfig();
     bool loadQuotes();
+    void parseConfigText(const String& content);
+    bool parseQuotesText(const String& content);
 
     PropConfig _config;
     std::vector<String> _quotes;
     size_t _currentIndex = 0;
+    bool _sdLoaded = false;
 };
