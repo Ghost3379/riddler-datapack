@@ -13,7 +13,7 @@ static const char* DEFAULT_CONFIG_TEXT =
 "show_waveform = true     ; dynamic Arkham oscilloscope\n"
 "\n"
 "[LEDS]\n"
-"brightness = 140         ; 0 to 255\n"
+"brightness = 38          ; 15% brightness (0 to 255)\n"
 "ambient_hue = 96         ; 96 = Arkham Emerald Green (0-255)\n"
 "pulse_speed = 14         ; Ambient breath rate (BPM)\n"
 "flicker_on_io = true     ; Fluid organic ripple on disk read/write\n";

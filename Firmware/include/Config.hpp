@@ -57,7 +57,7 @@
 // ==============================================================================
 struct PropConfig {
     uint8_t  display_brightness = 85;       // 10 - 100%
-    uint8_t  led_brightness     = 140;      // 0 - 255
+    uint8_t  led_brightness     = 38;       // 15% brightness (0 - 255)
     uint8_t  ticker_speed       = 2;        // 1 (slow) to 8 (fast)
     uint8_t  ambient_hue        = 96;       // 96 = Arkham Emerald Green (0-255 HSV)
     uint8_t  pulse_speed        = 14;       // Beats per minute for idle breath

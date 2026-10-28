@@ -1,4 +1,5 @@
 #include "LedEngine.hpp"
+#include <math.h>
 
 LedEngine::LedEngine() {
 }
@@ -8,20 +9,33 @@ void LedEngine::begin(const PropConfig& config) {
     _ambientHue = config.ambient_hue;
     _pulseBpm   = config.pulse_speed;
 
-    // Initialize 4 separate WS2812B physical channels (BRG byte order for 2020 LEDs)
-    FastLED.addLeds<WS2812B, PIN_LED_FRONT, BRG>(_leds_front, NUM_LEDS_FRONT);
-    FastLED.addLeds<WS2812B, PIN_LED_RIGHT, BRG>(_leds_right, NUM_LEDS_RIGHT);
-    FastLED.addLeds<WS2812B, PIN_LED_LEFT,  BRG>(_leds_left,  NUM_LEDS_LEFT);
-    FastLED.addLeds<WS2812B, PIN_LED_REAR,  BRG>(_leds_rear,  NUM_LEDS_REAR);
+    // Initialize 4 separate WS2812B channels using Adafruit_NeoPixel (NEO_GRB 800kHz)
+    _strip_front = Adafruit_NeoPixel(NUM_LEDS_FRONT, PIN_LED_FRONT, NEO_GRB + NEO_KHZ800);
+    _strip_right = Adafruit_NeoPixel(NUM_LEDS_RIGHT, PIN_LED_RIGHT, NEO_GRB + NEO_KHZ800);
+    _strip_left  = Adafruit_NeoPixel(NUM_LEDS_LEFT,  PIN_LED_LEFT,  NEO_GRB + NEO_KHZ800);
+    _strip_rear  = Adafruit_NeoPixel(NUM_LEDS_REAR,  PIN_LED_REAR,  NEO_GRB + NEO_KHZ800);
 
-    FastLED.setBrightness(_brightness);
-    FastLED.clear(true);
+    _strip_front.begin();
+    _strip_right.begin();
+    _strip_left.begin();
+    _strip_rear.begin();
 
-    Serial.println("[LED] 12x WS2812B initialized across 4 channels.");
+    setBrightness(_brightness);
+
+    // Initial clear
+    _strip_front.clear();
+    _strip_right.clear();
+    _strip_left.clear();
+    _strip_rear.clear();
+    _strip_front.show();
+    _strip_right.show();
+    _strip_left.show();
+    _strip_rear.show();
+
+    Serial.println("[LED] 12x WS2812B initialized with Adafruit_NeoPixel (15% Brightness).");
 }
 
 void LedEngine::triggerDiskActivity(bool is_write) {
-    // Smoothly kick activity level up (1.0 for write, 0.7 for read)
     float boost = is_write ? 1.0f : 0.7f;
     if (_activityLevel < boost) {
         _activityLevel = boost;
@@ -30,8 +44,11 @@ void LedEngine::triggerDiskActivity(bool is_write) {
 }
 
 void LedEngine::setBrightness(uint8_t brightness) {
-    _brightness = brightness;
-    FastLED.setBrightness(_brightness);
+    _brightness = constrain(brightness, 5, 255);
+    _strip_front.setBrightness(_brightness);
+    _strip_right.setBrightness(_brightness);
+    _strip_left.setBrightness(_brightness);
+    _strip_rear.setBrightness(_brightness);
 }
 
 void LedEngine::setAmbientHue(uint8_t hue) {
@@ -39,67 +56,67 @@ void LedEngine::setAmbientHue(uint8_t hue) {
 }
 
 void LedEngine::setPulseSpeed(uint8_t bpm) {
-    _pulseBpm = bpm;
+    _pulseBpm = constrain(bpm, 5, 60);
 }
 
 void LedEngine::update() {
     uint32_t now = millis();
-    if (now - _lastUpdateMillis < 16) return; // ~60 FPS update rate
+    if (now - _lastUpdateMillis < 20) return; // 50 FPS
     _lastUpdateMillis = now;
 
-    // Decay activity level smoothly back to 0.0 (calm)
+    // Decay activity level smoothly
     if (_activityLevel > 0.001f) {
-        _activityLevel *= 0.94f; // Exponential decay (~1.2 sec tail)
+        _activityLevel *= 0.94f;
     } else {
         _activityLevel = 0.0f;
     }
 
-    // 1. Ambient breathing base (sine wave between ~40 and 255)
-    uint8_t breathVal = beatsin8(_pulseBpm, 40, 255);
+    // Smooth organic sine wave breathing
+    float periodMs = (60000.0f / (float)_pulseBpm);
+    float phase = fmodf((float)now, periodMs) / periodMs * 6.28318f;
+    float sineBreath = (sinf(phase) + 1.0f) * 0.5f; // 0.0 to 1.0
 
-    // 2. Slow fluid wave phase offset across channels
-    // Front -> Right/Left -> Rear
-    uint8_t frontWave = beatsin8(_pulseBpm, 50, 255, 0, 0);
-    uint8_t sideWave  = beatsin8(_pulseBpm, 40, 240, 0, 64);
-    uint8_t rearWave  = beatsin8(_pulseBpm, 30, 220, 0, 128);
+    // Green base intensity: 40 to 255
+    uint8_t greenBase = 40 + (uint8_t)(sineBreath * 215.0f);
 
-    // 3. Compute organic transfer drift if disk is active
-    // "flicker not fast, just slowly and stuff"
-    float slowUndulation = (sin(now * 0.004f) + 1.0f) * 0.5f; // Gentle 0.6Hz wave
-    float driftPhase     = (cos(now * 0.003f) + 1.0f) * 0.5f;
+    // Activity flicker/boost
+    uint8_t boost = (uint8_t)(_activityLevel * 80.0f);
+    uint8_t r = (uint8_t)(_activityLevel * 30.0f); // subtle amber shift on write
+    uint8_t g = constrain(greenBase + boost, 0, 255);
+    uint8_t b = (uint8_t)(_activityLevel * 10.0f);
 
-    // Blend between pure ambient emerald and active lime/chartreuse glow
-    uint8_t activeHue = _ambientHue - (uint8_t)(16.0f * _activityLevel); // Shifts slightly yellow/lime
+    uint32_t greenColor = _strip_front.Color(r, g, b);
 
-    // --- Channel 1: Front Grille (2 LEDs) ---
+    // 1. Front Grille
     for (int i = 0; i < NUM_LEDS_FRONT; i++) {
-        float b = frontWave + (_activityLevel * (slowUndulation * 100.0f));
-        uint8_t v = constrain((int)b, 20, 255);
-        _leds_front[i] = CHSV(activeHue, 240, v);
+        _strip_front.setPixelColor(i, greenColor);
     }
 
-    // --- Channel 2: Right Side Louvers (2 LEDs) ---
+    // 2. Right Louvers
     for (int i = 0; i < NUM_LEDS_RIGHT; i++) {
-        float b = sideWave + (_activityLevel * (driftPhase * 90.0f));
-        uint8_t v = constrain((int)b, 20, 255);
-        _leds_right[i] = CHSV(activeHue, 245, v);
+        _strip_right.setPixelColor(i, greenColor);
     }
 
-    // --- Channel 3: Left Side Louvers (5 LEDs) ---
+    // 3. Left Louvers (subtle staggered wave)
     for (int i = 0; i < NUM_LEDS_LEFT; i++) {
-        // Subtle progressive ripple down the 5 side louvers
-        uint8_t louverOffset = beatsin8(18, 40, 240, 0, i * 40);
-        float b = louverOffset + (_activityLevel * (slowUndulation * 95.0f));
-        uint8_t v = constrain((int)b, 20, 255);
-        _leds_left[i] = CHSV(activeHue, 245, v);
+        float louverPhase = phase + (i * 0.4f);
+        float louverSine = (sinf(louverPhase) + 1.0f) * 0.5f;
+        uint8_t louverG = 40 + (uint8_t)(louverSine * 215.0f);
+        _strip_left.setPixelColor(i, _strip_left.Color(r, constrain(louverG + boost, 0, 255), b));
     }
 
-    // --- Channel 4: Rear / Turbine Hubs (3 LEDs) ---
+    // 4. Rear / Turbine Fans (counter-phase)
+    float rearPhase = phase + 3.14159f;
+    float rearSine = (sinf(rearPhase) + 1.0f) * 0.5f;
+    uint8_t rearG = 30 + (uint8_t)(rearSine * 225.0f);
+    uint32_t rearColor = _strip_rear.Color(r, constrain(rearG + boost, 0, 255), b);
     for (int i = 0; i < NUM_LEDS_REAR; i++) {
-        float b = rearWave + (_activityLevel * (driftPhase * 80.0f));
-        uint8_t v = constrain((int)b, 20, 255);
-        _leds_rear[i] = CHSV(activeHue + 2, 230, v);
+        _strip_rear.setPixelColor(i, rearColor);
     }
 
-    FastLED.show();
+    // Push out to all 4 channels
+    _strip_front.show();
+    _strip_right.show();
+    _strip_left.show();
+    _strip_rear.show();
 }
